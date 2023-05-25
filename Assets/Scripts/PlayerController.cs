@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(gm.Hurt());
         }
+
+        if (isPowered == true && collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(GameObject.Find("Enemy")); 
+        }
     }
 
 

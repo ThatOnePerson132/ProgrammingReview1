@@ -7,7 +7,7 @@ public class Power : Pickup
     public PlayerController pc;
 
     // Start is called before the first frame update
-    void Start()
+    public override void ChildStart()
     {
         pc = GameObject.Find("Player").gameObject.GetComponent<PlayerController>();
     }

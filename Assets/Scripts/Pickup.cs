@@ -12,15 +12,21 @@ public abstract class Pickup : MonoBehaviour
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
         bc = gameObject.GetComponent<BoxCollider2D>();
+        ChildStart();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public virtual void Activate()
+    {
+
+    }
+
+    public virtual void ChildStart()
     {
 
     }

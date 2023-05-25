@@ -47,8 +47,8 @@ MonoBehaviour:
   LivesText: {fileID: 0}
   score: 0
   scoreText: {fileID: 0}
-  pc: {fileID: 1474790487078549686, guid: e51463ac74250b34fa73c15c3008a680, type: 3}
-  playerPrefab: {fileID: 1474790487078549683, guid: e51463ac74250b34fa73c15c3008a680, type: 3}
+  pc: {fileID: 483650190555335236, guid: 6ceba2130f3b2ed4f914ee9d2fe614a1, type: 3}
+  playerPrefab: {fileID: 483650190555335233, guid: 6ceba2130f3b2ed4f914ee9d2fe614a1, type: 3}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

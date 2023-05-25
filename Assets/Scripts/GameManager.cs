@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour
         pc.moveSpeed = 0;
         pc.cc = null;
         pc.Lives--;
-        yield return new WaitForSeconds(3);
         Debug.Log(pc.moveSpeed);
+        yield return new WaitForSeconds(3);
         Destroy(GameObject.FindGameObjectWithTag("Player"));
         PlayerRespawn();
     }
