@@ -21,23 +21,25 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pc = GameObject.Find("Player").gameObject.GetComponent<PlayerController>();
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         LivesText.SetText("Lives: " + pc.Lives);
-        score = 0;
+
         scoreText.SetText("score: " + score);
     }
     public IEnumerator Hurt()
     {
         pc.moveSpeed = 0;
-        pc.Lives--;
         pc.cc = null;
+        pc.Lives--;
         yield return new WaitForSeconds(3);
+        Debug.Log(pc.moveSpeed);
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
         PlayerRespawn();
-        Destroy(GameObject.Find("Player"));
     }
     public void PlayerRespawn()
     {

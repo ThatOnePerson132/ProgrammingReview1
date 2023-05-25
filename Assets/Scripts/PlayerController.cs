@@ -8,13 +8,17 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
     public GameManager gm;
-    public float Lives;
+    public SpriteRenderer sr;
     public CircleCollider2D cc;
-    //public Animator animator;
+    public float Lives;
+    public bool isPowered = false;
+    public Sprite baseFace;
+    public Sprite angryFace;
 
     // Start is called before the first frame update
     void Start()
     {
+        sr = gameObject.GetComponent<SpriteRenderer>();
         cc = gameObject.GetComponent<CircleCollider2D>();
         gm = GameObject.Find("GameManager").gameObject.GetComponent<GameManager>();
         Lives = 3;
@@ -27,7 +31,6 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector2.right * moveSpeed * horizontalInput * Time.deltaTime);
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector2.up * moveSpeed * verticalInput * Time.deltaTime);
-       // animator.SetFloat("moveSpeed", Mathf.Abs(horizontalInput));
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
